@@ -30,6 +30,15 @@ def drawings():
 
 #Code to confirm that it is actually only letters
 
+
+def check_valid_word(string):
+    if (string.isalpha()) == True:
+        print(string)
+    else:
+        print("Please enter a valid word")
+        while not (string.isalpha()) == True:
+            string = input("What word:")
+
 #gets word from player 1
 secret_word = input("What word:")
 def split(word): 
@@ -38,13 +47,12 @@ def split(word):
 #converts to lowercase, places in string
 secret_word = secret_word.lower()
 
-#checks to make sure it is an actual word
-if (secret_word.isalpha()) == True:
-    print(secret_word)
-else:
-    print("Please enter a valid word")
-    while not (secret_word.isalpha()) == True:
-        secret_word = input("What word:")
+#checks to make sure it is valid
+check_valid_word(secret_word)
+        
+        
+        
+        
 
 def lives =7
 
