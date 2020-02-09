@@ -38,7 +38,7 @@ def split(word):
 #converts to lowercase, places in string
 secret_word = secret_word.lower()
 
-#checks to make sure it is ascii
+#checks to make sure it is an actual word
 if (secret_word.isalpha()) == True:
     print(secret_word)
 else:
