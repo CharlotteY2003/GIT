@@ -1,14 +1,27 @@
-#gets word from player 1
-secret_word = input("What word:")
-def split(word): 
-    return [char for char in word]
-
-#converts to lowercase, places in string
-secret_word = secret_word.lower()
-
-#checks to make sure it is ascii
-if (secret_word.isalpha()) == True:
-    print(secret_word)
-else:
-    print("Please enter a valid word")
-    secret_word = input("What word:")
+def drawings():
+    if lives = 6
+        print ("    o")
+    elif lives = 5
+        print ("    o")
+        print(" / ")
+    elif lives= 4
+        print ("    o")
+        print(" /  I ")
+    elif lives = 3
+        print ("    o")
+        print(" /  I  \ ")
+    elif lives = 2
+        print ("    o")
+        print(" /  I  \ ")
+        print("    I")
+    elif lives = 1
+        print ("    o")
+        print(" /  I  \ ")
+        print("    I")
+        print("   /  ")
+        print ("one last chance")
+    elif lives = 0
+        print ("    o")
+        print(" /  I  \ ")
+        print("    I")
+        print("   / \ ")
