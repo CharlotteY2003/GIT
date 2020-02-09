@@ -1,30 +1,61 @@
 def drawings():
     if lives = 6
-        print ("    o")
+        print ("   ______")
+        print ("   |     |")
+        print ("   |     o")
+        print ("   |     " )
+        print ("   |      ")
+        print ("   |     " )
+        print ("___|_____     ")
     elif lives = 5
-        print ("    o")
-        print(" / ")
+        print ("   ______")
+        print ("   |     |")
+        print ("   |     o")
+        print ("   |   /  " )
+        print ("   |     ")
+        print ("   |     " )
+        print ("___|_____     ")
     elif lives= 4
-        print ("    o")
-        print(" /  I ")
+        print ("   ______")
+        print ("   |     |")
+        print ("   |     o")
+        print ("   |   / I  " )
+        print ("   |     ")
+        print ("   |     " )
+        print ("___|_____     ")
     elif lives = 3
-        print ("    o")
-        print(" /  I  \ ")
+        print ("   ______")
+        print ("   |     |")
+        print ("   |     o")
+        print ("   |   / I \ " )
+        print ("   |     ")
+        print ("   |     " )
+        print ("___|_____     ")
     elif lives = 2
-        print ("    o")
-        print(" /  I  \ ")
-        print("    I")
+        print ("   ______")
+        print ("   |     |")
+        print ("   |     o")
+        print ("   |   / I \ " )
+        print ("   |     I")
+        print ("   |     " )
+        print ("___|_____     ")
     elif lives = 1
-        print ("    o")
-        print(" /  I  \ ")
-        print("    I")
-        print("   /  ")
+        print ("   ______")
+        print ("   |     |")
+        print ("   |     o")
+        print ("   |   / I \ " )
+        print ("   |     I")
+        print ("   |    /   " )
+        print ("___|_____     ")
         print ("one last chance")
     elif lives = 0
-        print ("    o")
-        print(" /  I  \ ")
-        print("    I")
-        print("   / \ ")
+        print ("   ______")
+        print ("   |     |")
+        print ("   |     o")
+        print ("   |   / I \ " )
+        print ("   |     I")
+        print ("   |    /  \ " )
+        print ("___|_____     ")
 
 
 
@@ -33,10 +64,10 @@ def drawings():
 
 def check_valid_word(string):
     if (string.isalpha()) == True:
-        return True
+        print(string)
     else:
+        print("Please enter a valid word")
         while not (string.isalpha()) == True:
-            print("Please enter a valid word")
             string = input("What word:")
 
 #gets word from player 1
