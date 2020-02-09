@@ -1,5 +1,10 @@
 inputWord = input("Player 1 give me a word:").lower()
 
+a= 0
+while a < 20000:
+    a += 1
+    print()
+
 def split(word):
     return list(word)
 
@@ -25,6 +30,12 @@ def guess(lives):
     count = 0
     while (inputWordList != guessWordList) or (lives <= 0):
         guessLetter = input("Player 2, make a guess:").lower()
+        if(guessLetter.isalpha() == True and len(guessLetter) == 1):
+            print("Thx")
+        else:
+            while not(guessLetter.isalpha() == True and len(guessLetter) == 1):
+                print("Please enter a valid guess")
+                guessLetter = input("Player 2, make a  guess:").lower()
         for i, letter in enumerate(inputWordList):
             if letter == guessLetter:
                 guessWordList[i] = letter
@@ -48,6 +59,8 @@ def guess(lives):
         print("Incorrect Letters: " + str(incorrectlist))
         print()
 
+    print("Yay! You Win! Congrats!")
+    print("The word was: " + str(inputWord))
 
 def drawings(lives):
     if lives == 6:
