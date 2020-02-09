@@ -64,11 +64,13 @@ while(lives >0):
                 lives-=1
                 drawing()
                 incorrectlist.append(userAnswer)
+                print("It's okay, keep trying!")
                 print("Incorrect guesses %s"%incorrectlist)
                 break
             else:
                 def index = wordlist.index(element)
                 newlist.insert(index, userAnswer)
+                print("Good job!")
                 print(correctlist)
                 #Check correctlist and incorrectlist is same list as main code
 
