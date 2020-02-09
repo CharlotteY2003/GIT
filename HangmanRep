@@ -31,7 +31,7 @@ def guess(lives):
     while (inputWordList != guessWordList) or (lives <= 0):
         guessLetter = input("Player 2, make a guess:").lower()
         if(guessLetter.isalpha() == True and len(guessLetter) == 1):
-            print("Thx")
+            print()
         else:
             while not(guessLetter.isalpha() == True and len(guessLetter) == 1):
                 print("Please enter a valid guess")
