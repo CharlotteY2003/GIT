@@ -1,5 +1,56 @@
+inputWord = input("Player 1 give me a word:").lower()
+
+def split(word):
+    return list(word)
+
+#Code to confirm that it is actually only letters
+if (inputWord.isalpha()) == True:
+    inputWord = inputWord
+else:
+    while not (inputWord.isalpha()) == True:
+        print("Please enter a valid word")
+        inputWord = input("Player 1 give me a word:").lower()
+
+inputWordList = (split(inputWord))
+
+guessWordList = []
+for eachIndex in inputWordList:
+    guessWordList.append("_")
+
+listLength = len(inputWord)
+incorrectlist = []
+lives = 7
+
+def guess(lives):
+    count = 0
+    while (inputWordList != guessWordList) or (lives <= 0):
+        guessLetter = input("Player 2, make a guess:").lower()
+        for i, letter in enumerate(inputWordList):
+            if letter == guessLetter:
+                guessWordList[i] = letter
+            else:
+                count += 1
+        if count == listLength:
+            lives -= 1
+            drawings(lives)
+            incorrectlist.append(guessLetter)
+            count = 0
+        else:
+            count = 0
+
+        if lives == 0:
+            print("Game Over! You Died!")
+            print("Correct Word: " + str(inputWord))
+            exit()
+
+        print(guessWordList)
+        print("Lives: " + str(lives))
+        print("Incorrect Letters: " + str(incorrectlist))
+        print()
+
+
 def drawings(lives):
-    if lives = 6
+    if lives == 6:
         print ("   ______")
         print ("   |     |")
         print ("   |     o")
@@ -7,7 +58,7 @@ def drawings(lives):
         print ("   |      ")
         print ("   |     " )
         print ("___|_____     ")
-    elif lives = 5
+    elif lives == 5:
         print ("   ______")
         print ("   |     |")
         print ("   |     o")
@@ -15,7 +66,7 @@ def drawings(lives):
         print ("   |     ")
         print ("   |     " )
         print ("___|_____     ")
-    elif lives= 4
+    elif lives == 4:
         print ("   ______")
         print ("   |     |")
         print ("   |     o")
@@ -23,7 +74,7 @@ def drawings(lives):
         print ("   |     ")
         print ("   |     " )
         print ("___|_____     ")
-    elif lives = 3
+    elif lives == 3:
         print ("   ______")
         print ("   |     |")
         print ("   |     o")
@@ -31,7 +82,7 @@ def drawings(lives):
         print ("   |     ")
         print ("   |     " )
         print ("___|_____     ")
-    elif lives = 2
+    elif lives == 2:
         print ("   ______")
         print ("   |     |")
         print ("   |     o")
@@ -39,7 +90,7 @@ def drawings(lives):
         print ("   |     I")
         print ("   |     " )
         print ("___|_____     ")
-    elif lives = 1
+    elif lives == 1:
         print ("   ______")
         print ("   |     |")
         print ("   |     o")
@@ -48,7 +99,7 @@ def drawings(lives):
         print ("   |    /   " )
         print ("___|_____     ")
         print ("one last chance")
-    elif lives = 0
+    elif lives == 0:
         print ("   ______")
         print ("   |     |")
         print ("   |     o")
@@ -58,93 +109,4 @@ def drawings(lives):
         print ("___|_____     ")
 
 
-
-#Code to confirm that it is actually only letters
-
-
-def check_valid_word(string):
-    if (string.isalpha()) == True:
-        print(string)
-    else:
-        print("Please enter a valid word")
-        while not (string.isalpha()) == True:
-            string = input("What word:")
-
-#gets word from player 1
-secret_word = input("What word:")
-def split(word): 
-    return [char for char in word]
-
-#converts to lowercase, places in string
-secret_word = secret_word.lower()
-
-#checks to make sure it is valid
-check_valid_word(secret_word)
-        
-        
-        
-        
-
-lives = 7
-while(lives > 0):
-    def userAnswer = input("Guess")
-        for element in wordlist:
-            if userAnswer!= element
-                
-                lives-=1
-                drawing()
-                incorrectlist.append(userAnswer)
-                print("Incorrect guesses %s"%incorrectlist)
-                break
-            else:
-                def index = wordlist.index(element)
-                newlist.insert(index, userAnswer)
-                print(correctlist)
-                #Check correctlist and incorrectlist is same list as main code
-
-                
-
-
-
-
-
-print("The correct answer was %s" %(wordlist))
-
-#Checks guess to word
-inputWord = input("Player 1 give me a word:").lower()
-
-def split(word):
-    return list(word)
-
-inputWordList = (split(inputWord))
-listLength = len(inputWordList)
-
-guessWordList = []
-for eachIndex in inputWordList:
-    guessWordList.append("_")
-
-def guess():
-    while inputWordList != guessWordList:
-        guessLetter = input("Player 2, make a guess:").lower()
-        for i, letter in enumerate(inputWordList):
-            if letter == guessLetter:
-                guessWordList[i] = letter
-        print(guessWordList)
-
-guess()
-
-
-
-
-
-#######Checks to make sure that a guess is a valid guess########
-
-guessLetter = input("Player2, please guess a letter:")
-guessLetter = guessLetter.lower()
-if (guessLetter.isalpha()) == True:
-    return True
-else:
-    while not (string.isalpha()) == True:
-        print("Please enter a valid guess")
-        string = input("Player2, please guess a letter:")
-       
+guess(lives)
