@@ -45,3 +45,29 @@ else:
     print("Please enter a valid word")
     while not (secret_word.isalpha()) == True:
         secret_word = input("What word:")
+
+def lives =7
+
+while(lives >0):
+    def userAnswer = input("Guess")
+        for element in wordlist:
+            if userAnswer!= element
+                
+                lives-=1
+                drawing()
+                incorrectlist.append(userAnswer)
+                print("Incorrect guesses %s"%incorrectlist)
+                break
+            else:
+                def index = wordlist.index(element)
+                newlist.insert(index, userAnswer)
+                print(correctlist)
+                #Check correctlist and incorrectlist is same list as main code
+
+                
+
+
+
+
+
+print("The correct answer was %s" %(wordlist))
