@@ -25,3 +25,23 @@ def drawings():
         print(" /  I  \ ")
         print("    I")
         print("   / \ ")
+
+
+
+#Code to confirm that it is actually only letters
+
+#gets word from player 1
+secret_word = input("What word:")
+def split(word): 
+    return [char for char in word]
+
+#converts to lowercase, places in string
+secret_word = secret_word.lower()
+
+#checks to make sure it is ascii
+if (secret_word.isalpha()) == True:
+    print(secret_word)
+else:
+    print("Please enter a valid word")
+    while not (secret_word.isalpha()) == True:
+        secret_word = input("What word:")
