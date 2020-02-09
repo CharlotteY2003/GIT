@@ -33,10 +33,10 @@ def drawings():
 
 def check_valid_word(string):
     if (string.isalpha()) == True:
-        print(string)
+        return True
     else:
-        print("Please enter a valid word")
         while not (string.isalpha()) == True:
+            print("Please enter a valid word")
             string = input("What word:")
 
 #gets word from player 1
@@ -64,13 +64,11 @@ while(lives >0):
                 lives-=1
                 drawing()
                 incorrectlist.append(userAnswer)
-                print("It's okay, keep trying!")
                 print("Incorrect guesses %s"%incorrectlist)
                 break
             else:
                 def index = wordlist.index(element)
                 newlist.insert(index, userAnswer)
-                print("Good job!")
                 print(correctlist)
                 #Check correctlist and incorrectlist is same list as main code
 
