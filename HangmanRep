@@ -1,4 +1,4 @@
-def drawings():
+def drawings(lives):
     if lives = 6
         print ("   ______")
         print ("   |     |")
@@ -85,9 +85,8 @@ check_valid_word(secret_word)
         
         
 
-def lives =7
-
-while(lives >0):
+lives = 7
+while(lives > 0):
     def userAnswer = input("Guess")
         for element in wordlist:
             if userAnswer!= element
@@ -133,3 +132,19 @@ def guess():
         print(guessWordList)
 
 guess()
+
+
+
+
+
+#######Checks to make sure that a guess is a valid guess########
+
+guessLetter = input("Player2, please guess a letter:")
+guessLetter = guessLetter.lower()
+if (guessLetter.isalpha()) == True:
+    return True
+else:
+    while not (string.isalpha()) == True:
+        print("Please enter a valid guess")
+        string = input("Player2, please guess a letter:")
+       
