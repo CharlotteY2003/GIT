@@ -71,3 +71,26 @@ while(lives >0):
 
 
 print("The correct answer was %s" %(wordlist))
+
+#Checks guess to word
+inputWord = input("Player 1 give me a word:").lower()
+
+def split(word):
+    return list(word)
+
+inputWordList = (split(inputWord))
+listLength = len(inputWordList)
+
+guessWordList = []
+for eachIndex in inputWordList:
+    guessWordList.append("_")
+
+def guess():
+    while inputWordList != guessWordList:
+        guessLetter = input("Player 2, make a guess:").lower()
+        for i, letter in enumerate(inputWordList):
+            if letter == guessLetter:
+                guessWordList[i] = letter
+        print(guessWordList)
+
+guess()
